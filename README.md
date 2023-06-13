@@ -71,13 +71,60 @@ First, fork this repo, then copy the URL, and in your terminal, use the command:
 
     git clone <forked-repo-URL>
 
+## Prerequisites
+
+    node: v19.6.0
+    npm: 9.4.0
+    React Native CLI
+    expo: 6.3.8
+
 ## How to Install dependencies
 Navigate to the root directory of the repository and run this command:
 
     npm install
 
-## Firebase Explanation???
+## Any further installations
+If you wish to add any new packages, please use the following command so that it is compatible with the rest of the Expo ecosystem:
 
-## Minimum version of Node.js needed:
+    expo install <package>
 
-    Node: v19.6.0
+## Firebase 
+Create a new firebase project and use Firebase's import/export feature to copy database schemas or rules as needed.
+Firebase offers import/export operations for different types of data in different ways. 
+Here are a few resources to help you:
+
+### 1. Cloud Firestore: 
+Firebase provides options to import and export Firestore data
+
+    https://firebase.google.com/docs/firestore/manage-data/export-import
+
+using the   
+    
+        gcloud 
+
+command-line tool.
+
+### 2. Firebase Realtime Database: 
+Firebase allows you to import and export your data to/from your Realtime Database using the Firebase console or the 
+
+        database:get 
+    
+and 
+    
+        database:set 
+
+commands in the Firebase CLI.
+
+### 3. Security Rules: 
+Security rules for Firestore, Realtime Database, and Storage can be managed using the Firebase Console, CLI, or the REST API. Here's the documentation on how to Get Started with Firebase Security Rules.
+
+    https://firebase.google.com/docs/rules/get-started#:~:text=To%20access%20your%20rules%20from,json%20file.
+
+Remember to always keep a backup of your Firebase data and rules before performing any import/export operations, and to secure your data exports as they may contain sensitive information.
+
+## How to run the app
+Download the Expo Go app on your device, and in the command line run
+
+    npx expo start
+
+The terminal will show a QR code for you to scan using your phone's QR scanner. You can then click on the link it produces to load the app on your device.
